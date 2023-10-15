@@ -1,0 +1,38 @@
+{
+  "DESIGN_NAME": "tt_um_urish_ringosc_cnt",
+  "VERILOG_FILES": [
+    "dir::src/tt_um_urish_ringosc_cnt.v",
+    "dir::src/prim_sky130/tt_prim_dfrbp.v",
+    "dir::src/prim_sky130/tt_prim_inv.v"
+  ],
+
+  "FP_SIZING": "absolute",
+  "DIE_AREA": "0 0 168.36 111.52",
+  "FP_DEF_TEMPLATE": "dir::tt/def/tt_block_1x1.def",
+
+  "FP_IO_HLENGTH": 2,
+  "FP_IO_VLENGTH": 2,
+
+  "//": "use alternative efabless decap cells to solve LI density issue",
+  "DECAP_CELL": "sky130_fd_sc_hd__decap_3 sky130_fd_sc_hd__decap_4 sky130_fd_sc_hd__decap_6 sky130_fd_sc_hd__decap_8 sky130_ef_sc_hd__decap_12",
+
+  "//": "period is in ns, so 20ns == 50mHz",
+  "CLOCK_PERIOD": 20,
+  "CLOCK_PORT": "clk",
+
+  "//": "don't use power rings or met5",
+  "DESIGN_IS_CORE": false,
+  "RT_MAX_LAYER": "met4",
+
+  "//": "save some time",
+  "RUN_KLAYOUT_XOR": false,
+
+  "//": "reduce wasted space",
+  "TOP_MARGIN_MULT": 1,
+  "BOTTOM_MARGIN_MULT": 1,
+  "LEFT_MARGIN_MULT": 6,
+  "RIGHT_MARGIN_MULT": 6,
+
+  "//": "Skip synth checks, otherwise OpenLane 2 fails with 'ABC: Error: The network is combinational'",
+  "QUIT_ON_SYNTH_CHECKS": false
+}
