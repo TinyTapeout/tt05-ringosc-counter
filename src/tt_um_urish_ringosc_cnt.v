@@ -34,6 +34,8 @@ module tt_um_urish_ringosc_cnt #(
 	wire [63:0] cnt_shifted = cnt >> cnt_shift;
 
 	assign uo_out = cnt_shifted[7:0];
+	assign uio_out = 8'b0;
+	assign uio_oe = 8'b0;
 
 	genvar i;
 	generate
@@ -53,7 +55,7 @@ module tt_um_urish_ringosc_cnt #(
 
 		// Counter
 		for (i=0; i<64; i=i+1) begin: counter
-			tt_prim_dfrbp cnt_bit_I (
+		tt_prim_dfrbp cnt_bit_I (
 				.d     (cnt_n[i]),
 				.q     (cnt[i]),
 				.q_n   (cnt_n[i]),
