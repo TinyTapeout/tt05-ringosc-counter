@@ -23,10 +23,11 @@ module tb (
 
     // instantiate the DUT
     tt_um_urish_ringosc_cnt osc(
-        `ifdef GL_TEST
-            .vccd1( 1'b1),
-            .vssd1( 1'b0),
-        `endif
+    // include power ports for the Gate Level test
+    `ifdef GL_TEST
+        .VPWR( 1'b1),
+        .VGND( 1'b0),
+    `endif
         .ui_in  ({reset_i, stop_i, shift_i}),
         .uo_out (cnt_o),
         .uio_in (8'b0),
