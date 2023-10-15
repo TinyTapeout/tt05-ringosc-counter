@@ -9,7 +9,7 @@ TOPLEVEL_LANG ?= verilog
 ifneq ($(GATES),yes)
 
 # this is the only part you should need to modify:
-COMPILE_ARGS    += -DUNIT_DELAY=\#0.081
+COMPILE_ARGS    += -DUNIT_DELAY=\#0.076
 VERILOG_SOURCES += $(PWD)/tb.v $(PWD)/tt_um_urish_ringosc_cnt.v $(PWD)/prim_generic/tt_prim_dfrbp.v $(PWD)/prim_generic/tt_prim_inv.v
 
 else
@@ -19,7 +19,7 @@ COMPILE_ARGS    += -DGL_TEST
 COMPILE_ARGS    += -DFUNCTIONAL
 COMPILE_ARGS    += -DUSE_POWER_PINS
 COMPILE_ARGS    += -DSIM
-COMPILE_ARGS    += -DUNIT_DELAY=\#0.081
+COMPILE_ARGS    += -DUNIT_DELAY=\#0.076
 VERILOG_SOURCES += $(PDK_ROOT)/sky130A/libs.ref/sky130_fd_sc_hd/verilog/primitives.v
 VERILOG_SOURCES += $(PWD)/gl/sky130_fd_sc_hd__inv_override.v
 VERILOG_SOURCES += $(PDK_ROOT)/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v
