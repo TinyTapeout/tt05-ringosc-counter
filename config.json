@@ -24,6 +24,10 @@
   "DESIGN_IS_CORE": false,
   "RT_MAX_LAYER": "met4",
 
+  "//": "make the PDN denser",
+  "FP_PDN_VOFFSET": 20.355,
+  "FP_PDN_VPITCH": 40.710,
+
   "//": "save some time",
   "RUN_KLAYOUT_XOR": false,
 
