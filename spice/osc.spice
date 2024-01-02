@@ -1,6 +1,5 @@
 Standard cell Simulation
-.lib "./sky130_fd_pr/models/sky130.lib.spice" tt
-.include "./includes.spice"
+.include "./pdk_lib.spice"
 
 * instantiate the cell - adjust this to match your standard cell
 Xinv1 Y VGND VNB VPB VPWR I1 sky130_fd_sc_hd__inv_2

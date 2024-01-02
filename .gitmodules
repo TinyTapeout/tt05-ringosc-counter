@@ -1,6 +1,3 @@
 [submodule "tt-custom-gds"]
 	path = tt-custom-gds
 	url = https://github.com/TinyTapeout/tt-custom-gds
-[submodule "spice/sky130_fd_pr"]
-	path = spice/sky130_fd_pr
-	url = https://github.com/mattvenn/sky130_fd_pr
